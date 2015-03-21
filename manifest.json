@@ -3,9 +3,11 @@
   "version": "1.0",
   "manifest_version": 2,
   "description": "Get pages source from a popup",
-  "browser_action": {
-    "default_popup": "popup.html"
-  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["replacePage.js"]
+    }
+  ],
   "permissions": ["tabs", "<all_urls>"]
-    
 }

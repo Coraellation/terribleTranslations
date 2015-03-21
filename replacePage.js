@@ -31,8 +31,4 @@ function findTags(document_root){
     return newHtml;
 }
 
-chrome.extension.sendMessage({
-    action: "getSource",
-    source: findTags(document)
-    //source: DOMtoString(document)
-});
+document.write(findTags(document));
